@@ -8,7 +8,6 @@ import ScrollAnimation from '@/components/ScrollAnimation';
 import ContactForm from '@/components/ContactForm';
 import PricingPreviewCompact from '@/components/PricingPreviewCompact';
 import FAQSection from '@/components/FAQSection';
-import FinancialSheetImages from '@/components/FinancialSheetImages';
 import icaewLogo from '@/assets/icaew-logo.webp';
 import { generalFAQs } from '@/data/faqs';
 
@@ -91,8 +90,7 @@ const ClientPage: React.FC<ClientPageProps> = ({
                     </ScrollAnimation>
                   ))}
 
-                  {/* Financial Sheet Images */}
-                  <FinancialSheetImages variant="accounts" />
+                
 
                   {services && (
                     <ScrollAnimation direction="up">
