@@ -4,6 +4,7 @@ import Footer from '@/components/layout/Footer';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { FileText, Calculator, Receipt, Users, Building2, TrendingUp, ArrowRight } from 'lucide-react';
+import PageBanner from '@/components/layout/PageBanner';
 
 const services = [
   {
@@ -57,21 +58,12 @@ const Services: React.FC = () => {
 
       <main>
         {/* Hero Section */}
-        <section className="bg-sonic-navy py-20 relative overflow-hidden">
-          <div className="decorative-circle-red w-24 h-24 top-10 right-[10%] opacity-20" />
-          <div className="decorative-circle-yellow w-16 h-16 bottom-10 left-[15%] opacity-20" />
-          
-          <div className="container mx-auto px-4 relative">
-            <div className="max-w-3xl mx-auto text-center">
-              <h1 className="font-heading text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
-                Our <span className="text-accent">Services</span>
-              </h1>
-              <p className="text-primary-foreground/80 text-lg">
-                Comprehensive accounting and financial services tailored to help your business succeed.
-              </p>
-            </div>
-          </div>
-        </section>
+          <PageBanner
+  title="Our Services"
+  subtitle="UK-Based Bookkeeping & Accounting Firm"
+  description="Providing professional financial services across the UK."
+  imageVariant="all"
+/>
 
         {/* Services Grid */}
         <section className="py-20">

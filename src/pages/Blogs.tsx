@@ -5,6 +5,8 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import ScrollAnimation from '@/components/ScrollAnimation';
 import { Button } from '@/components/ui/button';
+import PageBanner from '@/components/layout/PageBanner';
+
 
 interface BlogPost {
   id: number;
@@ -95,20 +97,13 @@ const Blogs: React.FC = () => {
       
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-primary/10 via-background to-background py-16 md:py-24 border-b-2 border-primary/20">
-          <div className="container mx-auto px-4">
-            <ScrollAnimation direction="up">
-              <div className="text-center max-w-3xl mx-auto">
-                <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
-                  Accounting Insights & News
-                </h1>
-                <p className="text-foreground text-lg md:text-xl">
-                  Stay informed with the latest accounting news, tax updates, and business tips from our expert team.
-                </p>
-              </div>
-            </ScrollAnimation>
-          </div>
-        </section>
+        <PageBanner
+  title="Our Blogs"
+  subtitle="UK-Based Bookkeeping & Accounting Firm"
+  description="Providing professional financial services across the UK."
+  imageVariant="all"
+/>
+
 
         {/* Category Filter */}
         <section className="py-8 border-b border-border">

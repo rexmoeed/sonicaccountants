@@ -29,10 +29,22 @@ const Footer: React.FC = () => {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link to="/book-meeting">
-              <Button variant="heroOutline" size="lg">
-                Schedule A Meeting
-              </Button>
-            </Link>
+  <Button
+    size="lg"
+    className="
+      bg-white
+      text-primary
+      border border-white
+      hover:bg-transparent
+      hover:text-white
+      rounded-[20px]
+      transition-all
+    "
+  >
+    Schedule A Meeting
+  </Button>
+</Link>
+
             <Link to="/pricing">
   <Button
     variant="outline"
@@ -103,28 +115,44 @@ const Footer: React.FC = () => {
 
           {/* Contact */}
           <div>
-            <h3 className="font-heading font-semibold text-lg mb-4">Contact Us</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <Phone className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                <div>
-                  <a href="tel:02081786228" className="text-primary-foreground/80 hover:text-primary transition-colors block">020 8178 6228</a>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <WhatsAppIcon className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
-                <a href="https://wa.me/442081786228" className="text-primary-foreground/80 hover:text-green-400 transition-colors">WhatsApp Us</a>
-              </li>
-              <li className="flex items-start gap-3">
-                <Mail className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                <a href="mailto:info@sonicaccountants.com" className="text-primary-foreground/80 hover:text-primary transition-colors">info@sonicaccountants.com</a>
-              </li>
-              <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                <span className="text-primary-foreground/80">London, United Kingdom</span>
-              </li>
-            </ul>
-          </div>
+  <h3 className="font-heading font-semibold text-lg mb-4">Contact Us</h3>
+  <ul className="space-y-4">
+    <li className="flex items-start gap-3 group">
+      <Phone className="w-5 h-5 text-primary shrink-0 mt-0.5 transition-all group-hover:text-yellow-400 group-hover:drop-shadow-[0_0_6px_rgba(250,204,21,0.9)]" />
+      <div>
+        <a
+          href="tel:02081786228"
+          className="text-primary-foreground/80 transition-all group-hover:text-yellow-400 group-hover:drop-shadow-[0_0_6px_rgba(250,204,21,0.9)] block"
+        >
+          020 8178 6228
+        </a>
+      </div>
+    </li>
+
+    <li className="flex items-start gap-3">
+      <WhatsAppIcon className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
+      <a href="https://wa.me/442081786228" className="text-primary-foreground/80 hover:text-green-400 transition-colors">
+        WhatsApp Us
+      </a>
+    </li>
+
+    <li className="flex items-start gap-3 group">
+      <Mail className="w-5 h-5 text-primary shrink-0 mt-0.5 transition-all group-hover:text-yellow-400 group-hover:drop-shadow-[0_0_6px_rgba(250,204,21,0.9)]" />
+      <a
+        href="mailto:info@sonicaccountants.com"
+        className="text-primary-foreground/80 transition-all group-hover:text-yellow-400 group-hover:drop-shadow-[0_0_6px_rgba(250,204,21,0.9)]"
+      >
+        info@sonicaccountants.com
+      </a>
+    </li>
+
+    <li className="flex items-start gap-3">
+      <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+      <span className="text-primary-foreground/80">London, United Kingdom</span>
+    </li>
+  </ul>
+</div>
+
         </div>
       </div>
 

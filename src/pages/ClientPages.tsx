@@ -10,6 +10,9 @@ import PricingPreviewCompact from '@/components/PricingPreviewCompact';
 import FAQSection from '@/components/FAQSection';
 import icaewLogo from '@/assets/icaew-logo.webp';
 import { generalFAQs } from '@/data/faqs';
+import slider2 from '@/assets/slider-2.jpg';
+import slider3 from '@/assets/slider-3.jpg';
+
 
 interface ClientPageProps {
   title: string;
@@ -43,21 +46,39 @@ const ClientPage: React.FC<ClientPageProps> = ({
       <main>
         {/* Hero */}
         <section className="bg-primary py-16 md:py-20 relative overflow-hidden">
-          <div className="decorative-circle-yellow w-20 h-20 top-10 right-[10%] opacity-30" />
-          <div className="decorative-circle-red w-16 h-16 bottom-10 left-[15%] opacity-30" />
-          
-          <div className="container mx-auto px-4 relative">
-            <div className="max-w-3xl mx-auto text-center">
-              <p className="text-accent font-semibold mb-2">{subtitle}</p>
-              <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-4">
-                {title}
-              </h1>
-              <p className="text-primary-foreground/80 text-base md:text-lg">{heroDescription}</p>
-              
-              
-            </div>
-          </div>
-        </section>
+  {/* Background Image */}
+  <div className="absolute inset-0">
+    <img
+      src={slider3} // <-- switch to slider3 when needed
+      alt="Hero background"
+      className="w-full h-full object-cover"
+    />
+    <div className="absolute inset-0 bg-black/70" />
+  </div>
+
+  <div className="decorative-circle-yellow w-20 h-20 top-10 right-[10%] opacity-30 relative z-10" />
+  <div className="decorative-circle-red w-16 h-16 bottom-10 left-[15%] opacity-30 relative z-10" />
+
+  <div className="container mx-auto px-4 relative z-10">
+    <div className="max-w-3xl mx-auto text-center">
+      <p className="text-accent font-semibold mb-2">{subtitle}</p>
+
+      <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-4">
+        {title}
+      </h1>
+
+      <p className="text-primary-foreground/80 text-base md:text-lg">
+        {heroDescription}
+      </p>
+
+      {/* ICAEW Badge */}
+      <div className="mt-6 flex justify-center">
+        
+      </div>
+    </div>
+  </div>
+</section>
+
 
         {/* Content */}
         <section className="py-12 md:py-20">

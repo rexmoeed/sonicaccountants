@@ -8,6 +8,7 @@ import { Building2, User, Wrench, Sparkles, ArrowRight, Check } from 'lucide-rea
 import businessImg from '@/assets/who-we-help-business.jpg';
 import soleTraderImg from '@/assets/who-we-help-soletrader.jpg';
 import contractorImg from '@/assets/who-we-help-contractor.jpg';
+import PageBanner from '@/components/layout/PageBanner';
 
 const clientTypes = [
   {
@@ -57,21 +58,12 @@ const WhoWeHelp: React.FC = () => {
 
       <main>
         {/* Hero Section */}
-        <section className="bg-sonic-navy py-20 relative overflow-hidden">
-          <div className="decorative-circle-yellow w-20 h-20 top-10 left-[10%] opacity-20" />
-          <div className="decorative-circle-blue w-16 h-16 bottom-10 right-[15%] opacity-20" />
-          
-          <div className="container mx-auto px-4 relative">
-            <div className="max-w-3xl mx-auto text-center">
-              <h1 className="font-heading text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
-                Who We <span className="text-accent">Help</span>
-              </h1>
-              <p className="text-primary-foreground/80 text-lg">
-                Tailored accounting services for businesses of all sizes and industries across the UK.
-              </p>
-            </div>
-          </div>
-        </section>
+          <PageBanner
+  title="Our Client Base"
+  subtitle="UK-Based Bookkeeping & Accounting Firm"
+  description="Providing professional financial services across the UK."
+  imageVariant="all"
+/>
 
         {/* Client Types */}
         <section className="py-20">
